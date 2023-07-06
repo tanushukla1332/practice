@@ -1,6 +1,6 @@
 
+import Todo from './Component/Hook/Todo'
 import './App.css'
-import Use from './Component/Use'
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <Use/>
+  <Todo/>
     </>
   )
 }
