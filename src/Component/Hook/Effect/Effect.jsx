@@ -55,33 +55,77 @@
 //     </div>
 //   );
 // }
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 
-export default function Effect() {
-  const [Count, setCount] = useState(0);
-  const[timer,setTimer]=useState(null)
+// export default function Effect() {
+//   const [Count, setCount] = useState(0);
+//   const[timer,setTimer]=useState(null)
 
-  useEffect(() => {
-    const hours = Math.floor(Count / 3600);
-    const minutes = Math.floor((Count % 3600) / 60);
-    const seconds = (Count % 3600) % 60;
+//   useEffect(() => {
+//     const hours = Math.floor(Count / 3600);
+//     const minutes = Math.floor((Count % 3600) / 60);
+//     const seconds = (Count % 3600) % 60;
 
-    setTimer(`${hours}:${minutes}:${seconds}`);
+//     setTimer(`${hours}:${minutes}:${seconds}`);
 
-    const interval = setInterval(() => {
-      setCount((prevCount) => prevCount + 1);
-    }, 1000);
+//     const interval = setInterval(() => {
+//       setCount((prevCount) => prevCount + 1);
+//     }, 1000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [Count]);
+//     return () => {
+//       clearInterval(interval);
+//     };
+//   }, [Count]);
     
 
+//   return (
+//     <div>
+//       <h1>Timer: {timer}</h1>
+//       <h2> Counter:{Count}</h2>
+//     </div>
+//   );
+
+// Fetching api with the help of UseEffect 
+
+
+import React,{useState,useEffect} from 'react'
+
+export default function Effect() {
+  const[data,setData]=useState()
+
+  useEffect(()=>{
+    fetch("https://jsonplaceholder.typicode.com/todos")
+    .then((res)=>res.json())
+    .then((data)=>setData(data))
+  },[])
   return (
     <div>
-      <h1>Timer: {timer}</h1>
-      <h2> Counter:{Count}</h2>
+
+      Fetching Api data with the help of useEffect:
+
+      
+        {data  &&  data.map((data,id)=>{
+          return(
+            <div>
+            <ul>
+             <li> title:{data.title}</li>
+             <li>userID:{data.userId}</li>
+             <li> id :{data.id}</li>
+            </ul>
+             </div>
+
+          )
+
+        })
+      
+     
+        
+      
+        
+        }
+      
+
     </div>
-  );
+  )
 }
+
