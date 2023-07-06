@@ -16,6 +16,9 @@ export default function Todo() {
   function deleteAll() {
     setList([]);
   }
+  function handleUpdate(){
+
+  }
 
   return (
     <div className="Allconatiner">
@@ -33,6 +36,7 @@ export default function Todo() {
               <li>{todo}</li>
             </ul>
             <button onClick={() => HandleDelete(index)}>❌</button>
+            <button onClick={{handleUpdate}}>Update</button>
           </div>
         );
       })}

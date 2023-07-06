@@ -1,5 +1,4 @@
-
-import Todo from './Component/Hook/Todo'
+import Effect from './Component/Hook/Effect/Effect'
 import './App.css'
 
 function App() {
@@ -8,7 +7,7 @@ function App() {
 
   return (
     <>
-  <Todo/>
+  <Effect/>
     </>
   )
 }
