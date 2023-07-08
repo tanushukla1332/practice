@@ -1,4 +1,4 @@
-import Effect from './Component/Hook/Effect/Effect'
+import Ref from './Component/Ref/Ref'
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-  <Effect/>
+  <Ref/>
     </>
   )
 }
