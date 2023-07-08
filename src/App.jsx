@@ -1,4 +1,4 @@
-import Ref from './Component/Ref/Ref'
+import StopWatch from './Component/Ref/StopWatch'
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-  <Ref/>
+  <StopWatch/>
     </>
   )
 }
