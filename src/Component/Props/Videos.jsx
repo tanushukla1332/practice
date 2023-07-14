@@ -4,7 +4,7 @@ export default function Videos(props) {
 
 
   return (
-    <div style={{padding:"20px", alignItems:"center",backgroundColor:"blue"}}>
+    <div style={{padding:"20px", alignItems:"center"}}>
       <iframe
         width="360"
         height="215"

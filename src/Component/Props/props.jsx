@@ -1,5 +1,6 @@
 import React from "react";
 import Videos from "./Videos";
+import Button from "./Button";
 
 export default function props() {
   let arr = [
@@ -23,8 +24,9 @@ export default function props() {
     },
   ];
   return (
-    <div
-      style={{ display: "flex", alignItems: "center" }}
+    <div>
+      <div
+      style={{ display: "flex", alignItems: "center" ,backgroundColor:"blue"}}
     >
       {arr.map((video) => (
         <Videos
@@ -35,5 +37,11 @@ export default function props() {
         ></Videos>
       ))}
     </div>
+    <Button name="Play" message="click messg" onClick={()=>console.log("play button on")}/>
+    <Button  name="pause" message="click again" onClick={()=>alert("pause video")}/> 
+    {/* this technique is called Custome Event  */}
+    
+    </div>
+    
   );
 }
