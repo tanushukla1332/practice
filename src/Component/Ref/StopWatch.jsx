@@ -37,44 +37,66 @@
 //       </div>
 //     )
 //   }
-import React, { useState, useRef } from 'react';
+// import React, { useState, useRef } from 'react';
 
-function Stopwatch() {
-  const [time, setTime] = useState(0);
-  const intervalRef = useRef(null);
+// function Stopwatch() {
+//   const [time, setTime] = useState(0);
+//   const intervalRef = useRef(null);
 
-  const startStopwatch = () => {
-    intervalRef.current = setInterval(() => {
-      setTime((prevTime) => prevTime + 10);
-    }, 10);
-  };
+//   const startStopwatch = () => {
+//     intervalRef.current = setInterval(() => {
+//       setTime((prevTime) => prevTime + 10);
+//     }, 10);
+//   };
 
-  const stopStopwatch = () => {
-    clearInterval(intervalRef.current);
-  };
+//   const stopStopwatch = () => {
+//     clearInterval(intervalRef.current);
+//   };
 
-  const resetStopwatch = () => {
-    clearInterval(intervalRef.current);
-    setTime(0);
-  };
+//   const resetStopwatch = () => {
+//     clearInterval(intervalRef.current);
+//     setTime(0);
+//   };
 
-  const formatTime = (ms) => {
-    const minutes = Math.floor(ms / 60000);
-    const seconds = Math.floor((ms % 60000) / 1000);
-    const milliseconds = Math.floor((ms % 1000) / 10);
+//   const formatTime = (ms) => {
+//     const minutes = Math.floor(ms / 60000);
+//     const seconds = Math.floor((ms % 60000) / 1000);
+//     const milliseconds = Math.floor((ms % 1000) / 10);
 
-    return `${minutes}:${seconds}.${milliseconds}`;
-  };
+//     return `${minutes}:${seconds}.${milliseconds}`;
+//   };
 
-  return (
-    <div>
-        <h1>Stopwatch using useref </h1>
-      <div>{formatTime(time)}</div>
-      <button onClick={startStopwatch}>Start</button>
-      <button onClick={stopStopwatch}>Stop</button>
-      <button onClick={resetStopwatch}>Reset</button>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//         <h1>Stopwatch using useref </h1>
+//       <div>{formatTime(time)}</div>
+//       <button onClick={startStopwatch}>Start</button>
+//       <button onClick={stopStopwatch}>Stop</button>
+//       <button onClick={resetStopwatch}>Reset</button>
+//     </div>
+//   );
+// }
 
-export default Stopwatch;
+// export default Stopwatch;
+
+// SET-TIMEOUT 
+ import React from 'react'
+ 
+ export default function StopWatch() {
+     //if I want uses both let and var  variablr in this question and in  both condition's 
+     //i want output  0,1,2,3,4 then we will use here IIFE function
+
+    for(let i = 0; i <5;i++){
+        setTimeout(()=>{
+            console.log(i)
+     },2000)
+     
+    }
+   return (
+
+     <div>
+        StopWatch</div>
+   )
+
+ }
+ 
