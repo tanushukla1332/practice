@@ -1,10 +1,10 @@
 import React from "react";
 
 export default function Videos(props) {
-  console.log(props)
+
 
   return (
-    <div>
+    <div style={{padding:"20px", alignItems:"center"}}>
       <iframe
         width="560"
         height="315"
@@ -14,11 +14,11 @@ export default function Videos(props) {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
-      <div style={{backgroundColor:"red" ,height:"200px" ,width:"300px" }}>
+      <div  style={{textAlign:"center" }}>
        <h1 >{props.title}</h1>
        <h2>{props.views}</h2>
        <h3>{props.like}</h3>
-       <h4>{props.subscription}</h4>
+       <h4>{props.subs}</h4>
     
        
       </div>
