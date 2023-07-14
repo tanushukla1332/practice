@@ -24,7 +24,7 @@ export default function props() {
   ];
   return (
     <div
-      style={{ display: "flex", alignItems: "center", backgroundColor: "gray" }}
+      style={{ display: "flex", alignItems: "center" }}
     >
       {arr.map((video) => (
         <Videos
