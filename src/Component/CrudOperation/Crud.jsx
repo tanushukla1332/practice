@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import './Crud.css'
 export default function Crud() {
   const [activity, setActivity] = useState("");
   const [list, setList] = useState([]);
