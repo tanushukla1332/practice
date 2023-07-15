@@ -1,40 +1,32 @@
-import React from "react";
-import Videos from "./Videos";
+import React ,{useState} from "react";
+import Video from "./Videos";
 import Button from "./Button";
+import videoDB from "./VideoDB";
 
 export default function props() {
-  let arr = [
-    {
-      title: "react js tutorials",
-      views: "1ook",
-      like: "2.5",
-      subscription: "5milion",
-    },
-    {
-      title: "frontEnd devloper",
-      views: "5.11k",
-      like: "2.89",
-      subscription: "10.56M",
-    },
-    {
-      title: "JavaScript devloper",
-      views: "10.11k",
-      like: "12.89",
-      subscription: "10M",
-    },
-  ];
+  const [videos,setVideo]=useState(videoDB);
+
+  
   return (
     <div>
+      <button onClick={()=>{
+        setVideo( [ ...videos, { id: videos.length+1,
+          title: "frontEnd devloper",
+          views: "5.11k",
+         like: "2.89",
+         subscription: "10.56M",
+        }])
+      }}>Add video </button>
       <div
-      style={{ display: "flex", alignItems: "center" ,backgroundColor:"blue"}}
+      style={{alignItems: "center" ,backgroundColor:"blue"}}
     >
-      {arr.map((video) => (
-        <Videos
+      {videos.map((video) => (
+        <Video
           title={video.title}
           views={video.views}
           like={video.like}
           subs={video.subscription}
-        ></Videos>
+        ></Video>
       ))}
     </div>
     <Button name="Play" message="click messg" onClick={()=>console.log("play button on")}/>

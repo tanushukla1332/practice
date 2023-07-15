@@ -1,10 +1,10 @@
-import React from "react";
+import React ,{useState} from "react";
 
-export default function Videos(props) {
+export default function Video(props) {
 
 
   return (
-    <div style={{padding:"20px", alignItems:"center"}}>
+    <div style={{padding:"20px", alignItems:"center",display:"grid"}}>
       <iframe
         width="360"
         height="215"
@@ -14,7 +14,7 @@ export default function Videos(props) {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
-      <div  style={{textAlign:"center" ,margin:"20px" }}>
+      <div>
        <span> title:{props.title}</span>
        <p> views:{props.views}</p>
        <p> like:{props.like}</p>
