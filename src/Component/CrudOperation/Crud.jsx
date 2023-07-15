@@ -10,6 +10,13 @@ export default function Crud() {
         setActivity("")
 
     }
+    function handleDelete(i){
+        const newlist = list.filter((item,id)=>{
+            return (i!==id)
+        })
+       setList(newlist)
+    }
+
 
   return (
     <div className="Container">
@@ -20,6 +27,7 @@ export default function Crud() {
                     <ul>
                         <li>{item}</li>
                     </ul>
+                    <button onClick={()=>handleDelete(i)}>❌</button>
                     </div>
             )
         })}
