@@ -1,6 +1,5 @@
 
 import Crud from './Component/CrudOperation/Crud'
-import './App.css'
 
 function App() {
   return (

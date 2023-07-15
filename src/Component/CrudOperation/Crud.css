@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: lightblue;
+}
+.Container {
+    font-family: Arial, sans-serif;
+    width:500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius:10px;
+    margin-top: 20vh;
+    background-color: gray;
+  }
+  
+  .heading {
+    text-align: center;
+  }
+  
+  .map-start {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ul-list-item {
+    list-style-type: none;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  .list-item {
+    margin-bottom: 5px;
+    border:1px solid #ccc;
+    background-color:white;
+    text-align: center;
+
+  }
+  
+  .delete,
+  .update,
+  .add {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+  .update {
+    background-color: #ffa500;
+  }
+    
+  .add {
+    background-color: #2196f3;
+  }
+  
+  
