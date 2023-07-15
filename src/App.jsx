@@ -1,13 +1,11 @@
-import Props from './Component/Props/props'
+
+import Crud from './Component/CrudOperation/Crud'
 import './App.css'
 
 function App() {
-
-
-
   return (
     <div>
-<Props/>
+   <Crud/>
     </div>
   )
 }

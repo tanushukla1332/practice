@@ -1,6 +1,13 @@
- #root {
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: black;
+ * {
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:rgb(203, 199, 199);
+  color:black;
+}
 
+.Container{
+  text-align: center;
+  height: 100vh;
 }
