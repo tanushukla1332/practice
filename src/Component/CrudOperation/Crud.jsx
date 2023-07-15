@@ -16,7 +16,9 @@ export default function Crud() {
         })
        setList(newlist)
     }
+    function handleUpdate(i){
 
+    }
 
   return (
     <div className="Container">
@@ -28,6 +30,7 @@ export default function Crud() {
                         <li>{item}</li>
                     </ul>
                     <button onClick={()=>handleDelete(i)}>❌</button>
+                    <button onClick={()=>handleUpdate(i)}>✍</button>
                     </div>
             )
         })}
