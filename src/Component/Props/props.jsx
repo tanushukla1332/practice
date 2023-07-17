@@ -3,7 +3,7 @@ import Video from "./Videos";
 import Button from "./Button";
 import videoDB from "./VideoDB";
 
-export default function props() {
+export default function Props() {
   const [videos,setVideo]=useState(videoDB);
 
   
